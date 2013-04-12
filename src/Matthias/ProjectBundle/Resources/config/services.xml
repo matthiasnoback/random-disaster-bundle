@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="matthias_project.request_listener"
+                 class="Matthias\ProjectBundle\EventListener\RequestListener">
+            <argument>%matthias_project.start_at%</argument>
+            <argument>%matthias_project.deadline%</argument>
+            <argument type="service" id="matthias_project.exception_generator" />
+            <tag name="kernel.event_subscriber" />
+        </service>
+
+        <service id="matthias_project.exception_generator"
+                 class="Matthias\ProjectBundle\Generator\ExceptionGenerator">
+        </service>
+    </services>
+</container>

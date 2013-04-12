@@ -1,0 +1,22 @@
+{
+    "name": "matthiasnoback/random-disaster-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for creating random disasters in your Symfony project",
+    "keywords": ["random","disaster"],
+    "homepage": "http://github.com/matthiasnoback/MicrosoftTranslatorBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Noback",
+            "email": "matthiasnoback@gmail.com",
+            "homepage": "http://php-and-symfony.matthiasnoback.nl"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": ">=2.1,<2.3-dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0" : { "Matthias" : "src/" }
+    }
+}
